@@ -17,3 +17,18 @@ A simple ERC-20 token contract built on the Ethereum network. This repository de
    ```bash
    git clone https://github.com/yourusername/ERC20-Sample-Token.git
    cd ERC20-Sample-Token
+
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("MyToken", function () {
+  it("Should deploy the token and assign total supply to the owner", async function () {
+    const [owner] = await ethers.getSigners();
+    const Token = await ethers.getContractFactory("MyToken");
+    const myToken = await Token.deploy(1000);
+    await myToken.deployed();
+
+    const ownerBalance = await myToken.balanceOf(owner.address);
+    expect(ownerBalance).to.equal(ethers.BigNumber.from("1000").mul(ethers.BigNumber.from("10").pow(18)));
+  });
+});
