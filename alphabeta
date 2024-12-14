@@ -1,0 +1,19 @@
+# ERC20 Sample Token
+
+A simple ERC-20 token contract built on the Ethereum network. This repository demonstrates the basics of writing, testing, and deploying a smart contract using Solidity and the Hardhat framework.
+
+## Features
+- **ERC-20 Standard Compliance:** Implements `transfer`, `approve`, `transferFrom` methods as per the ERC-20 standard.
+- **Testing with Hardhat:** Includes a test suite using Mocha/Chai to verify the token's behavior.
+- **Deployment Scripts:** Simple Hardhat deployment scripts to a local test network (like `Hardhat Network`) and instructions to deploy to testnets (e.g., Goerli).
+
+## Prerequisites
+- [Node.js](https://nodejs.org/en/) >= 14.x
+- [Hardhat](https://hardhat.org/)
+- [Git](https://git-scm.com/)
+
+## Getting Started
+1. **Clone the Repo:**
+   ```bash
+   git clone https://github.com/yourusername/ERC20-Sample-Token.git
+   cd ERC20-Sample-Token
